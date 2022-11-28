@@ -1,7 +1,5 @@
 import React from "react";
 import "./details.css";
-import Collapse from "../../Apropos/Collapse"
-
 function Collapse_Details({ description, equipments }) {
   return (
     <>
