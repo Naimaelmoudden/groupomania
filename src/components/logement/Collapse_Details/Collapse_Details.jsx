@@ -1,5 +1,6 @@
 import React from "react";
 import "./details.css";
+
 function Collapse_Details({ description, equipments }) {
   return (
     <>
