@@ -8,6 +8,15 @@
     font-size: 18px;
     font-weight: 500;
     margin: auto 20px auto 0px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.host__name span{
+    display: block;
+    margin: 0px 5px;
 }
 .host__image{
     display: flex;
@@ -42,7 +51,14 @@
     }
     .host__name{
         font-size: 12px;
+        display: flex;
+        width: 93px;
+        justify-content: flex-end !important;
+        text-align: end !important;
+        flex-direction: column;
+        width: fit-content;
         margin: auto 10px auto 0px;
+
     }
     .rate__star{
         margin-left: 0px;

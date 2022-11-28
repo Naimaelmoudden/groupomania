@@ -1,25 +1,26 @@
 import React, { useState } from "react";
 import "./carousel.css";
 
-function Carousel({ pictures }) {
+function Carousel(props) {
+  
   const [locationPicture, setLocationPicture] = useState(0);
 
   /* Fonction d'appel de l'image suivante avec boucle */
   const nextPicture = () => {
     //pictures.lenght mis à zéro lorsqu'on arrive au bout de la liste
     setLocationPicture(
-      locationPicture === pictures.length - 1 ? 0 : locationPicture + 1
+      locationPicture === props.pictures.length - 1 ? 0 : locationPicture + 1
     );
   };
 
   /* Fonction d'appel de l'image précédente avec boucle */
   const previousPicture = () => {
     setLocationPicture(
-      locationPicture === 0 ? pictures.length - 1 : locationPicture - 1
+      locationPicture === 0 ? props.pictures.length - 1 : locationPicture - 1
     );
   };
   //Fonction SI pour déterminer la présence des chevrons et numéro s'il y a une seule image
-  if (pictures.length > 1) {
+  if (props.pictures.length > 1) {
     return (
       <>
         {/* Chevrons de navigation*/}
@@ -27,7 +28,7 @@ function Carousel({ pictures }) {
         {<i className="fa-solid fa-chevron-right" onClick={nextPicture}></i>}
 
         {/* Ajout des images du carousel */}
-        {pictures.map((img, index) => {
+        {props.pictures.map((img, index) => {
           return (
             <div key={index}>
               {index === locationPicture && (
@@ -40,7 +41,7 @@ function Carousel({ pictures }) {
               {index === locationPicture && (
                 /* Ajout du numéro de l'image */
                 <span className="carousel__number">
-                  {locationPicture + 1}/{pictures.length}
+                  {locationPicture + 1}/{props.pictures.length}
                 </span>
               )}
             </div>
@@ -52,7 +53,7 @@ function Carousel({ pictures }) {
     return (
       <>
         {/* Ajout des images du carousel */}
-        {pictures.map((img, index) => {
+        {props.pictures.map((img, index) => {
           return (
             <div key={index}>
               {index === locationPicture && (

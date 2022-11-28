@@ -2,6 +2,11 @@
     margin-bottom: 0px;
     width: 48%;
 }
+
+.info__collapse p, .info__collapse ul{
+    margin: 0px;
+}
+
 .collapse__title {
     display: flex;
     justify-content: space-between;
@@ -27,6 +32,17 @@ details[open] .collapse__title .fa-chevron-down {
     color: #FF6060;
     list-style: none;
 }
+
+.details-collapses{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.details-collapses details{
+    width: 48%;
+}
+
 
 /*TABLET*/
 @media screen and (min-width: 768px) and (max-width: 991px){ 
