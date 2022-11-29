@@ -33,15 +33,27 @@ details[open] .collapse__title .fa-chevron-down {
     list-style: none;
 }
 
-.details-collapses{
+
+.collapse-details{
+    width: 100%;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    flex-direction: row;
 }
 
-.details-collapses details{
+.collapse-details details{
     width: 48%;
 }
+
+.collapse-details details summary{
+    margin: 0px;
+}   
+
+.collapse-details details p, .collapse-details details ul{
+    margin: 0px;
+}   
+
 
 
 /*TABLET*/
@@ -58,6 +70,14 @@ details[open] .collapse__title .fa-chevron-down {
         font-size: 15px;
         padding: 10px 10px 10px 10px;
     }
+    .collapse-details{
+        flex-direction: column !important;
+    }
+    .collapse-details details{
+        width: 100% !important;
+    }
+
+
 }
 
 /*MOBILE*/
@@ -76,4 +96,12 @@ details[open] .collapse__title .fa-chevron-down {
         padding: 10px 10px 10px 10px;
         border-radius: 0px 0px 5px 5px ;
     }
+    .collapse-details{
+        flex-direction: column !important;
+    }
+    .collapse-details details{
+        width: 100% !important;
+    }
+
+
 }

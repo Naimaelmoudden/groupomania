@@ -6,6 +6,7 @@ import Host from "../../components/logement/Host/Host";
 import Rate from "../../components/logement/Rate/Rate";
 import Details from "../../components/logement/Collapse_Details/Collapse_Details";
 
+
 import "./logement.css";
 
 import { useParams } from "react-router-dom";

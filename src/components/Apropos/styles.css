@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@400;500;700&display=swap");
 
+.collapse{
+  margin: 20px 0px;
+}
+
 .apropos__banner {
   height: 223px;
   max-width: 1240px;

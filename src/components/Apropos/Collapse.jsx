@@ -3,13 +3,12 @@ import "./styles.css";
 
 function Collapse(props) {
   return (
-    <details className="info__details service"  >
+    <details className="collapse"  >
       <summary className="info__title">
-        {props.titre} <i className="fa-solid fa-chevron-down"></i>
+        {props.titre}
+        <i className="fa-solid fa-chevron-down"></i>
       </summary>
-      <p className="info__text">
         {props.children}
-      </p>
     </details>
   );
 }
